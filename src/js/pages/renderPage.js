@@ -1,6 +1,10 @@
 export default function renderPage() {
   const siteContainer = document.getElementById('site-container');
-  siteContainer.appendChild(createHeader('Park Bistro'))
+
+  siteContainer.append(
+    createHeader('Park Bistro'),
+    createMain()
+  )
 }
 
 
@@ -32,4 +36,10 @@ function createNav(links) {
 
   nav.appendChild(ul);
   return nav;
+}
+
+function createMain() {
+  const main = document.createElement('main');
+  main.classList.add('content');
+  return main;
 }
