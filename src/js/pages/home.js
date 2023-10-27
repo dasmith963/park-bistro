@@ -1,5 +1,10 @@
-export default function loadHomePage(){
+export default function loadHomePage() {
   const main = document.querySelector('.content');
-  main.replaceChildren();
+  main.replaceChildren(createHomeSection());
 }
 
+function createHomeSection() {
+  const homeSection = document.createElement('section');
+  homeSection.classList.add('home');
+  return homeSection;
+}
