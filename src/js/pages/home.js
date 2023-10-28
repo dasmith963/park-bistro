@@ -9,7 +9,11 @@ function createHomeSection() {
   const homeSection = document.createElement('section');
   homeSection.classList.add('home');
 
-  homeSection.appendChild(createHeroSection());
+  homeSection.append(
+    createHeroSection(),
+    createActionButtons(['Book Now!', 'View Menu'])
+  );
+
   return homeSection;
 }
 
@@ -23,4 +27,16 @@ function createHeroSection() {
   );
 
   return heroContainer;
+}
+
+function createActionButtons(buttons) {
+  const btnContainer = document.createElement('div');
+
+  buttons.forEach(button => {
+    const btn = document.createElement('button');
+    btn.textContent = button;
+    btnContainer.appendChild(btn);
+  })
+
+  return btnContainer;
 }
