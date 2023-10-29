@@ -7,7 +7,6 @@ export default function renderPage() {
   )
 }
 
-
 function createHeader(restaurantName) {
   const header = document.createElement('header');
   const logo = document.createElement('h1');
@@ -15,7 +14,6 @@ function createHeader(restaurantName) {
 
   logo.textContent = restaurantName;
   header.append(logo, nav);
-
   return header;
 }
 
