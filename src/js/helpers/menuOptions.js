@@ -71,3 +71,25 @@ export function getDesserts() {
 
   return [dessert1, dessert2, dessert3];
 }
+
+export function getDrinks() {
+  const drink1 = new Meal(
+    'Ambrosia Bliss',
+    '9.99',
+    'A champagne cocktail with gin, champagne, lemon juice, and sugar.'
+  )
+
+  const drink2 = new Meal(
+    'Sazerac',
+    '9.99',
+    'A classic cocktail featuring rye whiskey, absinthe, and bitters.'
+  )
+
+  const drink3 = new Meal(
+    'Mint Julep Elegance',
+    '9.99',
+    'A refined mint julep made with top-shelf bourbon and fresh mint.'
+  )
+
+  return [drink1, drink2, drink3];
+}
