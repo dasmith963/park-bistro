@@ -34,8 +34,21 @@ function createContactInfo() {
 
 function createForm() {
   const formContainer = document.createElement('div');
+
   const form = document.createElement('form');
   form.setAttribute('action', '#');
+
+  const userNameInputs = document.createElement('div');
+  userNameInputs.append(
+    createInput('text', 'First Name: ', 'first-name'),
+    createInput('text', 'Last Name: ', 'last-name'),
+  );
+
+  form.append(
+    userNameInputs,
+    createInput('email', 'Email: ', 'user-email'),
+    createInput('text', 'Subject: ', 'subject')
+  );
 
   formContainer.appendChild(form);
   return formContainer;
