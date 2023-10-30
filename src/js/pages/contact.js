@@ -40,3 +40,19 @@ function createForm() {
   formContainer.appendChild(form);
   return formContainer;
 }
+
+function createInput(type, labelName, id) {
+  const formGroup = document.createElement('div');
+
+  const label = document.createElement('label');
+  label.textContent = labelName;
+  label.setAttribute('for', id);
+
+  const input = document.createElement('input');
+  input.setAttribute('type', type);
+  input.setAttribute('name', id);
+  input.setAttribute('id', id);
+
+  formGroup.append(label, input);
+  return formGroup;
+}
