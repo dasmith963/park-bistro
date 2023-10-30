@@ -9,7 +9,10 @@ function createContactSection() {
   const contactSection = document.createElement('section');
   contactSection.classList.add('contact');
 
-  contactSection.append(createContactInfo());
+  contactSection.append(
+    createContactInfo(),
+    createForm()
+  );
 
   return contactSection;
 }
@@ -27,4 +30,13 @@ function createContactInfo() {
   );
 
   return container;
+}
+
+function createForm() {
+  const formContainer = document.createElement('div');
+  const form = document.createElement('form');
+  form.setAttribute('action', '#');
+
+  formContainer.appendChild(form);
+  return formContainer;
 }
