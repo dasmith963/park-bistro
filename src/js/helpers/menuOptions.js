@@ -32,7 +32,7 @@ export function getMainCourses() {
   const mainCourse1 = new Meal(
     'Grilled Snapper',
     '9.99',
-    'Fresh Gulf snapper grilled and drizzled with a lemon beurre blanc sauce, accompanied by jambalaya.'
+    'Fresh Gulf snapper grilled and drizzled with a lemon beurre blanc sauce.'
   )
 
   const mainCourse2 = new Meal(
@@ -44,8 +44,30 @@ export function getMainCourses() {
   const mainCourse3 = new Meal(
     'Lemon Herb Roasted Chicken',
     '9.99',
-    'Half chicken roasted with lemon, garlic, and fresh herbs, accompanied by roasted vegetables.'
+    'Half chicken roasted with lemon, garlic, and fresh herbs, served with roasted vegetables.'
   )
 
   return [mainCourse1, mainCourse2, mainCourse3];
+}
+
+export function getDesserts() {
+  const dessert1 = new Meal(
+    'Tiramisu',
+    '9.99',
+    'Classic Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cheese.'
+  )
+
+  const dessert2 = new Meal(
+    'Chocolate Lava Cake',
+    '9.99',
+    'Warm, gooey chocolate cake with a molten center, topped with vanilla ice cream.'
+  )
+
+  const dessert3 = new Meal(
+    'The Parc Cheesecake',
+    '9.99',
+    'Creamy cheesecake with a graham cracker crust, served with berry compote.'
+  )
+
+  return [dessert1, dessert2, dessert3];
 }
