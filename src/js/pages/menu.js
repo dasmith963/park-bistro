@@ -1,4 +1,5 @@
 import addText from "../helpers/addText";
+import { getAppetizers, getMainCourses, getDesserts, getDrinks } from "../helpers/menuOptions";
 
 export default function loadMenuPage() {
   const main = document.querySelector('.content');
@@ -8,6 +9,18 @@ export default function loadMenuPage() {
 function createMenuSection() {
   const menuSection = document.createElement('section');
   menuSection.classList.add('menu');
+
+  const sectionHeader = document.createElement('h2');
+  sectionHeader.textContent = 'Our Menu';
+
+  menuSection.append(
+    sectionHeader,
+    createMealItem('Appetizers', getAppetizers()),
+    createMealItem('Main Courses', getMainCourses()),
+    createMealItem('Desserts', getDesserts()),
+    createMealItem('Drinks', getDrinks())
+  )
+
   return menuSection;
 }
 
