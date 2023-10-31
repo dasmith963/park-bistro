@@ -48,7 +48,8 @@ function createForm() {
     userNameInputs,
     createInput('email', 'Email: ', 'user-email'),
     createInput('text', 'Subject: ', 'subject'),
-    createTextArea()
+    createTextArea(),
+    createFormButton()
   );
 
   formContainer.appendChild(form);
@@ -87,4 +88,14 @@ function createTextArea() {
 
   formGroup.append(label, textArea);
   return formGroup;
+}
+
+function createFormButton() {
+  const btnContainer = document.createElement('div');
+
+  const formBtn = document.createElement('button');
+  formBtn.textContent = 'Submit'
+
+  btnContainer.appendChild(formBtn);
+  return btnContainer;
 }
