@@ -47,7 +47,8 @@ function createForm() {
   form.append(
     userNameInputs,
     createInput('email', 'Email: ', 'user-email'),
-    createInput('text', 'Subject: ', 'subject')
+    createInput('text', 'Subject: ', 'subject'),
+    createTextArea()
   );
 
   formContainer.appendChild(form);
@@ -58,8 +59,8 @@ function createInput(type, labelName, id) {
   const formGroup = document.createElement('div');
 
   const label = document.createElement('label');
-  label.textContent = labelName;
   label.setAttribute('for', id);
+  label.textContent = labelName;
 
   const input = document.createElement('input');
   input.setAttribute('type', type);
@@ -67,5 +68,23 @@ function createInput(type, labelName, id) {
   input.setAttribute('id', id);
 
   formGroup.append(label, input);
+  return formGroup;
+}
+
+function createTextArea() {
+  const formGroup = document.createElement('div');
+
+  const label = document.createElement('label');
+  label.setAttribute('for', 'message');
+  label.textContent = 'Message:';
+
+  const textArea = document.createElement('textarea');
+  textArea.setAttribute('id', 'message');
+  textArea.setAttribute('name', 'message');
+  textArea.setAttribute('maxlength', '1000');
+  textArea.setAttribute('cols', '30');
+  textArea.setAttribute('rows', '10');
+
+  formGroup.append(label, textArea);
   return formGroup;
 }
