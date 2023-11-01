@@ -23,10 +23,11 @@ function createNav(links) {
 
   links.forEach(link => {
     const li = document.createElement('li');
+    li.setAttribute('data-id', link.toLowerCase());
 
     const anchor = document.createElement('a');
     anchor.textContent = link;
-    anchor.setAttribute('href', '#' + link);
+    anchor.setAttribute('href', '#' + link.toLowerCase());
 
     li.appendChild(anchor);
     ul.appendChild(li);
