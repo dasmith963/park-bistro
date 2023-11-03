@@ -21,9 +21,10 @@ function createNav(links) {
   const nav = document.createElement('nav');
   const ul = document.createElement('ul');
 
-  links.forEach(link => {
+  links.forEach((link, index) => {
     const li = document.createElement('li');
     li.setAttribute('data-id', link.toLowerCase());
+    if (index === 0) li.classList.add('active');
 
     const anchor = document.createElement('a');
     anchor.textContent = link;
