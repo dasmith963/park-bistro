@@ -28,7 +28,7 @@ function createNav(links) {
 
     const anchor = document.createElement('a');
     anchor.textContent = link;
-    anchor.setAttribute('href', '#' + link.toLowerCase());
+    anchor.setAttribute('href', '#');
 
     li.appendChild(anchor);
     ul.appendChild(li);
