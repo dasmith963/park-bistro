@@ -11,6 +11,7 @@ function createMenuSection() {
   menuSection.classList.add('menu');
 
   const sectionHeader = document.createElement('h2');
+  sectionHeader.classList.add('section-header');
   sectionHeader.textContent = 'Our Menu';
 
   menuSection.append(
