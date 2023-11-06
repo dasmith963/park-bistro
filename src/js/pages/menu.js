@@ -26,15 +26,25 @@ function createMenuSection() {
 
 function createMealItem(category, meals) {
   const mealContainer = document.createElement('div');
-  const mealItem = document.createElement('div');
+  mealContainer.classList.add('meal-group');
+
   const mealCategory = document.createElement('h3');
+  mealCategory.classList.add('meal-category');
   mealCategory.textContent = category;
 
+  const mealItem = document.createElement('div');
+  mealItem.classList.add('meal-item');
+
   meals.forEach(meal => {
+    const mealItemHeading = document.createElement('div');
+    mealItemHeading.classList.add('meal-item-heading');
+
     const mealTitle = addText(`${meal.title}`);
     const mealPrice = addText(`${meal.price}`);
     const mealDescription = addText(`${meal.description}`);
-    mealItem.append(mealTitle, mealPrice, mealDescription);
+
+    mealItemHeading.append(mealTitle, mealPrice);
+    mealItem.append(mealItemHeading, mealDescription);
   })
 
   mealContainer.append(mealCategory, mealItem);
