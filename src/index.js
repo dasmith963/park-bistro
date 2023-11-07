@@ -5,7 +5,10 @@ import loadContactPage from "./js/pages/contact";
 import setActiveTab from "./js/helpers/setActiveTab";
 import './css/style.css';
 
-document.addEventListener('click', updateMainContent);
+document.addEventListener('click', (e) => {
+  updateMainContent(e);
+  handleHomeBtnClick(e);
+});
 
 function updateMainContent(e) {
   const currentTab = e.target.closest('[data-id]');
@@ -21,6 +24,17 @@ function updateMainContent(e) {
     loadContactPage();
   }
   setActiveTab(currentTab);
+}
+
+function handleHomeBtnClick(e) {
+  if (e.target.textContent === 'Book Now!') {
+    loadContactPage()
+    setActiveTab(document.querySelector('[data-id="contact"]'));
+  }
+  if (e.target.textContent === 'View Menu') {
+    loadMenuPage()
+    setActiveTab(document.querySelector('[data-id="menu"]'));
+  }
 }
 
 renderPage();
