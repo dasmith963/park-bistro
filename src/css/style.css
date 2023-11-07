@@ -238,6 +238,10 @@ form>div:last-of-type {
   justify-content: end;
 }
 
+.form-btn {
+  margin: 0;
+}
+
 .form-btn:disabled:hover,
 .form-btn:disabled:focus-visible {
   background: var(--home-btn-color);
@@ -254,4 +258,73 @@ form>div:last-of-type {
   background: var(--secondary-bg-color);
   color: var(--light-text-color);
   border: 2px solid transparent;
+}
+
+@media only screen and (min-width: 801px) {
+  button {
+    cursor: pointer;
+    padding: 15px 32px;
+    font-size: 1.45rem;
+    margin-right: 25px;
+  }
+
+  header {
+    justify-content: space-between;
+  }
+
+  li:not(.active)>a:hover {
+    background: #00000037;
+    opacity: 1;
+  }
+
+  main>section.home {
+    height: calc(100vh - 92px);
+  }
+
+  .hero-container {
+    font-size: 2rem;
+  }
+
+  .hero-container>:nth-child(2) {
+    font-size: 2.5rem;
+  }
+
+  .section-header {
+    font-size: 2.6rem;
+  }
+
+  .meal-category {
+    font-size: 2.3rem;
+  }
+
+  .meal-item-heading {
+    font-size: 2rem;
+  }
+
+  .meal-item {
+    padding: 0 7.5em 16px;
+  }
+
+  .meal-item>p {
+    font-size: 1.4rem;
+  }
+
+  .contact-info>p {
+    font-size: 1.4rem;
+  }
+
+  form {
+    width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  label {
+    font-size: 1.4rem;
+  }
+
+  .name-inputs {
+    display: flex;
+    gap: 10px;
+  }
 }
