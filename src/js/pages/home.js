@@ -11,7 +11,8 @@ function createHomeSection() {
 
   homeSection.append(
     createHeroSection(),
-    createActionButtons(['Book Now!', 'View Menu'])
+    createActionButtons(['Book Now!', 'View Menu']),
+    createFooter()
   );
 
   return homeSection;
@@ -41,4 +42,25 @@ function createActionButtons(buttons) {
   })
 
   return btnContainer;
+}
+
+function createFooter() {
+  const footer = document.createElement('footer');
+
+  const photographerName = document.createElement('a');
+  photographerName.textContent = 'Nick Night';
+  photographerName.setAttribute('href', 'https://unsplash.com/@nicknight?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash');
+
+  const unsplashLink = document.createElement('a');
+  unsplashLink.textContent = 'Unsplash';
+  unsplashLink.setAttribute('href', 'https://unsplash.com/photos/brown-wooden-house-near-green-trees-and-river-during-daytime--7ApLF3vbEg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash');
+
+  footer.append(
+    addText('Photo by'),
+    photographerName,
+    addText('on'),
+    unsplashLink
+  );
+
+  return footer;
 }
