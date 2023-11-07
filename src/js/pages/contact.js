@@ -19,12 +19,15 @@ function createContactSection() {
 
 function createContactInfo() {
   const container = document.createElement('div');
+  container.classList.add('contact-info');
 
   const sectionHeader = document.createElement('h2');
-  sectionHeader.textContent = 'We\'d love to hear from you';
+  sectionHeader.classList.add('section-header');
+  sectionHeader.textContent = 'Contact Us';
 
   container.append(
     sectionHeader,
+    addText('We\'d love to hear from you!'),
     addText('Please call us @ (555) 555-5555'),
     addText('or email us using the contact form')
   );
@@ -39,6 +42,7 @@ function createForm() {
   form.setAttribute('action', '#');
 
   const userNameInputs = document.createElement('div');
+  userNameInputs.classList.add('name-inputs');
   userNameInputs.append(
     createInput('text', 'First Name: ', 'first-name'),
     createInput('text', 'Last Name: ', 'last-name'),
@@ -94,7 +98,9 @@ function createFormButton() {
   const btnContainer = document.createElement('div');
 
   const formBtn = document.createElement('button');
-  formBtn.textContent = 'Submit'
+  formBtn.classList.add('form-btn');
+  formBtn.textContent = 'Submit';
+  formBtn.disabled = true;
 
   btnContainer.appendChild(formBtn);
   return btnContainer;
