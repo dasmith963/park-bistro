@@ -74,9 +74,12 @@ ul {
   display: flex;
 }
 
+a {
+  color: inherit;
+}
+
 li>a {
   text-decoration: none;
-  color: inherit;
   font-size: 1.2rem;
   padding: 8px 16px;
   letter-spacing: 1.5px;
@@ -130,6 +133,17 @@ main>section.home {
 .btn-container>button:active {
   background: var(--active-home-btn);
   transform: translateY(0);
+}
+
+footer {
+  background: var(--secondary-bg-color);
+  color: var(--light-text-color);
+  width: 100%;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
 }
 
 .section-header,
