@@ -4,9 +4,9 @@
 }
 
 :root {
-  --primary-bg-color: #fafafa;
+  --primary-bg-color: #eae9eb;
   --secondary-bg-color: #333333;
-  --text-color: #1f2937;
+  --text-color: #2a2a2a;
   --light-text-color: #f7f8f8;
   --home-btn-color: #9c4040;
   --active-home-btn: #cb5b5b;
@@ -174,7 +174,7 @@ footer {
   margin: 0 auto;
   width: 85%;
   padding-top: 8px;
-  border-bottom: 2px solid #cacdd3;
+  border-bottom: 2px solid #80848d;
   border-radius: .25rem;
 }
 
